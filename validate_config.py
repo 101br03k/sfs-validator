@@ -293,7 +293,7 @@ class Component(BaseModel):
         extra = "forbid"
 
 class GearImage(BaseModel):
-    gearId: str
+    gearId: Optional[str]
     imgSrc: Optional[str]
 
     class Config:
