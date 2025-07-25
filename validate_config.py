@@ -193,6 +193,7 @@ class AIConfiguration(BaseModel):
 
 class AIIntegration(BaseModel):
     enabled: bool
+    enableUI: bool
     provider: Optional[AIProvider] = None
     configuration: Optional[AIConfiguration] = None
 
