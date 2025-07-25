@@ -141,11 +141,20 @@ class DateFormat(BaseModel):
     class Config:
         extra = "forbid"
 
+class HeatMap(BaseModel):
+    polylineColor: Optional[str]
+    tileLayerUrl: Optional[str]
+    enableGreyScale: Optional[bool]
+
+    class Config:
+        extra = "forbid"
+
 class Appearance(BaseModel):
     locale: Locale
     unitSystem: UnitSystem
     timeFormat: TimeFormat
     dateFormat: DateFormat
+    heatmap: Optional[HeatMap] = None
     sportTypesSortingOrder: List[str]
 
     class Config:
