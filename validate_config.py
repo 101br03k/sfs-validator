@@ -284,7 +284,7 @@ class MaintenanceTask(BaseModel):
 class Component(BaseModel):
     tag: str
     label: str
-    imgSrc: Optional[str]
+    
     attachedTo: List[str]
     maintenance: List[MaintenanceTask]
 
@@ -292,7 +292,7 @@ class Component(BaseModel):
         extra = "forbid"
 
 class GearImage(BaseModel):
-    gearId: str
+    gearId: Optional[str]
     imgSrc: Optional[str]
 
     class Config:
